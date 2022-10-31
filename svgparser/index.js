@@ -1,0 +1,4 @@
+const {parseSVG, makeAbsolute} = require('svg-path-parser');
+const commands = parseSVG("M 72.296405,31.67144 H 18.842501 l -5.746294,-5.746296 v -9.354433 l 5.61266,-5.612661 h 49.444862 l 8.68626,8.68626 h 11.49259 l 8.552624,-8.552625 h 51.315747 l 5.81311,5.278573 v 10.523738 l -5.07812,4.777442 -8.6171,0 0.0485,10.623964 27.3392,-0.04063 0.0608,-40.6324402 H 1.0125341 L 1.2557951,42.443759 72.364529,42.278401 72.262993,31.671448 Z");
+makeAbsolute(commands); // Note: mutates the commands in place!
+console.log(commands);

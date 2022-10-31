@@ -1,0 +1,166 @@
+<html>
+
+<head>
+    <script src="http://mrdoob.github.io/stats.js/build/stats.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <div class="gamewrapper">
+        <div id="hud">
+            <h1 id="timer" class="franklin"></h1>
+            <p class="franklin m-0"><small>b - return to menu</small></p>
+            <p class="franklin m-0"><small>r - restart the current level</small></p>
+            <p class="franklin m-0"><small>k - restart at last checkpoint</small></p>
+            <style>
+                .wr1 {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .wr2 {
+                    width: 90%;
+                    height: 90%;
+                    position: absolute;
+                    left: 5%;
+                    top: 5%;
+                    border-radius: 5px;
+                    border: 1px solid;
+                    text-align: center;
+                }
+                
+                .wr3 {
+                    top: 50%;
+                    left: 50%;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                
+                .button-pressed {
+                    background-color: gold;
+                }
+                </style>
+                <div class="container-fluid" style="width: 150px;">
+                    <div class="row">
+                        <div class="col-4 p-0">
+                        </div>
+                        <div class="col-4 p-0">
+                            <div class="wr1">
+                                <div class="wr2" id="ArrowUp">
+                                    <div class="wr3">W</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 p-0"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 p-0">
+                            <div class="wr1">
+                                <div class="wr2" id="ArrowLeft">
+                                    <div class="wr3">A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 p-0">
+                            <div class="wr1">
+                                <div class="wr2" id="ArrowDown">
+                                    <div class="wr3">S</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 p-0">
+                            <div class="wr1">
+                                <div class="wr2" id="ArrowRight">
+                                    <div class="wr3">D</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div id="gamecontrols">
+            <div class="controlsHeading">
+                <button class="btn btn-outline-dark" type="button" data-toggle="collapse" data-target="#instructions"
+                    aria-expanded="false" aria-controls="instructions">
+                    <h1>how to play <span class="material-icons">
+                            play_circle_filled
+                        </span></h1>
+                </button>
+                <img class="logo" src="logo.svg" />
+            </div>
+            <div id="instructions" class="collapse">
+                <img src="instructions.svg" style="width: 100%; height: auto;" />
+            </div>
+            <div class="p-2">
+                <h2 class="franklin">level select</h2>
+                <p><small><button class="btn btn-outline-secondary" onclick="resetData()">click to clear your
+                            data</button></small></p>
+                <div class="container-fluid">
+                    <div class="row" id="app">
+                        <div class="col-3" v-for="(level, index) in levellist">
+                            <div class="levelbox text-center"
+                                v-bind:class="{ completed: userdata[level.id].passed, allstar: userdata[level.id].besttimewithallstars !== undefined }"
+                                v-on:click="startLevel(index)">
+                                <h2 class="franklin">Level {{ index + 1 }}</h2>
+                                <p class="m-0"><span>{{ userdata[level.id].passed ? "Passed" : "Incomplete" }}{{
+                                        userdata[level.id].besttimewithallstars !== undefined ? " with all stars" : ""
+                                        }}</span></p>
+                                <p class="m-0"><span>Best time: {{ userdata[level.id].passed && false ?
+                                        formattime(userdata[level.id].besttime) : "N/A" }}</span></p>
+                                <p class="m-0"><span>Best all-stars time: {{ userdata[level.id].besttimewithallstars !==
+                                        undefined && false ? formattime(userdata[level.id].besttimewithallstars) : "N/A"
+                                        }}</span></p>
+                                {{userdata[level.id].beststars}}/{{level.stars.length}} stars
+                                <p class="m-0 text-muted">Played N/A times</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="game" width="1920" height="1080" style="border: 1px black solid; width: 100%;"></canvas>
+    </div>
+    <!-- <object id="level1SVG" data="/level1.svg" type="image/svg+xml"></object> -->
+    <script>
+        let canvas = document.getElementById("game")
+        let ctx = canvas.getContext("2d")
+        let defTransform = ctx.getTransform();
+    </script>
+
+    <script src="parser.js"></script>
+    <script src="logger.js"></script> <!-- dumb in browser logging -->
+    <script src="Vector2.js"></script> <!-- geometry library -->
+    <script src="helpers.js"></script> <!-- helpers for geometry -->
+    <script src="Player.js"></script> <!-- player rendering and interaction with rail updates -->
+    <script src="Level.js"></script> <!-- full level management, dealing with main scene rendering -->
+    <script src="materials.js"></script> <!-- basic set of materials for walls -->
+    <script src="levels.js"></script> <!-- geometry for actual playable levels -->
+    <script src="inputs.js"></script> <!-- captures inputs -->
+    <script>
+        let levelSVGs = [
+            $.get("/level1.svg"),
+            $.get("/level2.svg"),
+            $.get("/level3.svg"),
+            $.get("/level4.svg")
+        ]
+    </script>
+    <script src="parkour.js"></script> <!-- runs everything -->
+</body>
+
+</html>

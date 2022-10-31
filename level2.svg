@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10000"
+   height="10000"
+   viewBox="0 0 2645.8334 2645.8334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="level2.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="897.98855"
+     inkscape:cy="-7.941518"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1010"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect915"
+       style="fill:#000000;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -131.44235,217.87852 h 121.119498 v 14.36476 H -131.44235 Z" />
+    <path
+       id="rect1425"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.524049"
+       d="m -186.15208,364.29402 h 508.39887 v 13.89809 h -508.39887 z" />
+    <path
+       id="rect1425-3"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.526798"
+       d="M 110.11504,-135.55495 V 378.19211 H 96.217026 v -513.74706 z" />
+    <path
+       id="rect1425-8"
+       style="fill:#ff706d;fill-opacity:1;stroke-width:0.817167"
+       d="m -186.15215,-857.99706 7e-5,1236.18915 -13.89801,4e-5 -6e-5,-1236.18923 z" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.584418;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -45.242243,217.99405 h 14.021169"
+       id="path918"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect1425-3-5"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.57691"
+       d="M 231.82414,-304.46929 V 311.6683 H 217.9261 v -616.13759 z" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:3.3006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 217.9261,311.6683 V -135.55495"
+       id="path918-0"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect1425-3-5-0"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.527185"
+       d="M 322.31221,-135.55495 V 378.94806 H 308.41417 V -135.55495 Z" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:3.67044;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 322.24679,374.87742 H 875.30876"
+       id="path918-0-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect915-4"
+       style="fill:#000000;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 575.21827,-25.677893 h 233.37271 v 14.364768 H 575.21827 Z" />
+    <path
+       id="rect1425-8-2"
+       style="fill:#5468ff;fill-opacity:1;stroke-width:0.817167"
+       d="m 888.12102,-857.99706 7e-5,1236.18915 -13.89801,4e-5 -6e-5,-1236.18923 z" />
+    <path
+       id="rect915-4-1"
+       style="fill:#72e5f7;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 232.29087,-537.842 v 233.37271 H 217.9261 V -537.842 Z" />
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Franklin Gothic Demi';
+    src: URL('Franklin\ Gothic\ Demi\ Regular.ttf') format('truetype');
+  }
+
+.gamewrapper {
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#gamecontrols {
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    opacity: 1;
+    /* filter: blur(4px); */
+    width: 100%;
+    height: 100%;
+    
+}
+
+.controlsHeading {
+    height: 12%;
+    font-family: 'Franklin Gothic Demi', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo {
+    float: right;
+    height: 100%;
+    width: auto;
+}
+
+.franklin {
+    font-family: 'Franklin Gothic Demi', 'Arial Narrow', Arial, sans-serif;
+}
+
+.levelBox {
+    height: 200px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.levelBox:hover {
+    cursor: pointer;
+    background-color: ghostwhite;
+}
+
+.levelBox.completed {
+    background-color: lightgreen;
+}
+
+.levelBox.completed:hover {
+    background-color: greenyellow;
+}
+
+.levelBox.completed.allstar {
+    background-color: gold;
+    border: 5px solid darkkhaki;
+}
+
+.levelBox.completed.allstar:hover {
+    background-color: rgb(255, 255, 79);
+}
+
+#hud {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    opacity: 0.7;
+    padding: 7px;
+}
